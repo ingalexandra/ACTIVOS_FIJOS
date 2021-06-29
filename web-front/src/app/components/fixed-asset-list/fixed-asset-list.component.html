@@ -1,0 +1,76 @@
+<ngx-spinner></ngx-spinner>
+<div class="text-center p-4">
+  <h2 class="list-title">Lista de Activos Fijos</h2>
+</div>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-sm-12">
+      <form [formGroup]="formFilterData" class="container m-0 px-0 pt-2 pb-4" autocomplete="off" novalidate>
+        <div class="d-flex flex-row justify-content-between">
+          <div class="col-3 px-1">
+            <label for="type">
+              Tipo de Activo Fijo:
+            </label>
+            <select id="type" class="form-control" formControlName="type">
+              <option [ngValue]="0" selected>Seleccione</option>
+              <option *ngFor="let t of types" [ngValue]="t.idTypeAsset">
+                {{ t.name | uppercase }}
+              </option>
+            </select>
+          </div>
+          <div class="col-3 px-1">
+            <label for="serial">
+              Serial:
+            </label>
+            <input id="serial" type="text" class="form-control" formControlName="serial" placeholder="Número de serial" maxlength="30" />
+          </div>
+          <div class="col-2 px-1">
+            <label for="purchaseDate">
+              Fecha de compra:
+            </label>
+            <input type="date" class="form-control" formControlName="purchaseDate" onkeydown="return false">
+          </div>
+          <div class="col-2 px-1 mt-1-85" >
+            <button *ngIf="showApplyFilterButton" type="button" class="btn btn-apply-filter w-100" (click)="applyFilter()">Aplicar Filtro</button>
+          </div>
+          <div class="col-2 px-1 mt-1-85">
+            <button *ngIf="showCleanFilterButton" type="button" class="btn btn-clean-filter w-100" (click)="cleanFilter()">Borrar Filtro</button>
+          </div>
+        </div>
+      </form>
+      <table *ngIf="isFixedAssetsListEmpty(); else emptyTable" class="w-100 table table-bordered table-hover" 
+        id="fixedAssetTable" aria-describedby="Table to list fixed assets">
+        <thead>
+          <tr>
+            <th scope="col" *ngFor="let header of arrHeaders">
+              {{ header }}
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let fa of fixedAssets">
+            <td>{{ fa.name }}</td>
+            <td>{{ getType(fa.idType) }}</td>
+            <td>{{ fa.description }}</td>
+            <td>{{ fa.serialNumber }}</td>
+            <td>{{ fa.inventoryNumber }}</td>
+            <td>{{ fa.assetWeight }}</td>
+            <td>{{ fa.assetHeigh }}</td>
+            <td>{{ fa.assetWidth }}</td>
+            <td>{{ fa.assetLong }}</td>
+            <td>{{ fa.purchaseValue | currency }}</td>
+            <td>{{ fa.purchaseDate | date: 'dd/MM/yyyy' }}</td>
+            <td>{{ getArea(fa.idArea) }}</td>
+            <td>{{ getPerson(fa.idPerson) }}</td>
+          </tr>
+        </tbody>
+      </table>      
+    </div>
+    <ng-template #emptyTable>
+      <div class="col-sm-12 text-center p-4">
+        No hay resultados.
+      </div>
+    </ng-template>
+  </div>
+</div>
+
