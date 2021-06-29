@@ -1,4 +1,4 @@
-# API ACTIVOS FIJOS
+# ACTIVOS FIJOS
 
 Los activos fijos de una empresa son los bienes materiales, son necesarios para el
 funcionamiento de la empresa y no se destinan para la venta, ejemplos de estos son: bienes
@@ -66,6 +66,8 @@ http-server dist/
 ```
 
 Y por último, abrimos en el navegador la siguiente URL: http://127.0.0.1:8080/web-front/
+
+**Paso 7.** En la carpeta **entregables**, también se encuentra la colección en POSTMAN con todos los servicios implementados y el modelo entidad relación de la base de datos.
 
 ## Licencia
 [MIT](https://choosealicense.com/licenses/mit/)
