@@ -48,7 +48,7 @@ Workbench en una instancia local.
 
 **Paso 4.** Una vez creada la base de datos, se debe crear una carpeta llamada **config** en la carpeta Disco local (C:) (Si el sistema operativo de su máquina es Windows) o en la raíz del sistema (Si el sistema operativo de su máquina es Linux) y ubicar el archivo **api_rest.properties** en la carpeta.
 
-**IMPORTANTE** En el archivo **api_rest.properties** se deben actualizar las propiedades **spring.datasource.username** y **spring.datasource.password** con las credenciales configuradas en su máquina, para acceder a la base de datos de su instancia local.
+**IMPORTANTE:** En el archivo **api_rest.properties** se deben actualizar las propiedades ***spring.datasource.username*** y ***spring.datasource.password*** con las credenciales configuradas en su máquina, para acceder a la base de datos de su instancia local.
 
 **Paso 5.** Ubicados en la carpeta **entregables**, se debe ejecutar el siguiente comando para correr la aplicación en java:
 ```bash
