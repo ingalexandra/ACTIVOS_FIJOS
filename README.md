@@ -13,9 +13,9 @@ ciudad (diferentes áreas se encuentran en diferentes ciudades).
 
 Por lo tanto, se decide diseña un API RESTFul que permita administrar los activos y permita:
 
-**1.** Buscar los activos fijos por: tipo, fecha de compra y/o serial.
-**2.** Crear nuevos activos.
-**3.** Actualizar activos.
+1. Buscar los activos fijos por: tipo, fecha de compra y/o serial.
+2. Crear nuevos activos.
+3. Actualizar activos.
 
 ## Tecnologías
 
@@ -48,15 +48,22 @@ Workbench en una instancia local.
 
 **Paso 4.** Una vez creada la base de datos, se debe crear una carpeta llamada **config** en la carpeta Disco local (C:) (Si el sistema operativo de su máquina es Windows) o en la raíz del sistema (Si el sistema operativo de su máquina es Linux).
 
-**Paso 5.** Ahora, se debe ejecutar el siguiente comando para correr la aplicación en java:
+**Paso 5.** Ubicados en la carpeta **entregables**, se debe ejecutar el siguiente comando para correr la aplicación en java:
 ```bash
 java -jar api_rest-0.0.1-SNAPSHOT.jar
 ```
 
-**Paso 6.** Por último, se debe abrir en un IDE (Puede ser Visual Studio Code) el proyecto en Angular y ejecutar el siguiente comando para correr la aplicación:
+**Paso 6.** Ahora, vamos a instalar un servidor http con el siguiente comando:
 ```bash
-ng serve --open
+npm i -g http-server --save
 ```
+
+Una vez instalado y ubicados en la carpeta **entregables**, ejecutamos la aplicación con el siguiente comando:
+```bash
+http-server dist/
+```
+
+Y por último, abrimos en el navegador la siguiente URL: http://127.0.0.1:8080/web-front/
 
 ## Licencia
 [MIT](https://choosealicense.com/licenses/mit/)
