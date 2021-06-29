@@ -25,16 +25,45 @@ Por lo tanto, se decide diseña un API RESTFul que permita administrar los activ
 ### BACKEND
 * Java 8
 * Maven
-* Framework Spring Boot 2.5.2
+* Framework Spring Boot
 * Postman
+
+### FRONTEND
+* Angular 8
+* Bootstrap 4
 
 ## Instalación
 
 **Paso 1.** Abrir la consola y ejecutar el siguiente comando:
-
 ```bash
 git clone https://github.com/ingalexandra/ACTIVOS_FIJOS.git
 ```
+**Paso 2.** Para ubicarse en el directorio con los entregables, se debe ejecutar el siguiente comando:
+```bash
+cd entregables
+```
+
+**Paso 3.** En la carpeta se encuentra el script de creación del esquema de la base de datos (MySQL). Este script se puede ejecutar con la aplicacion 
+Workbench en una instancia local. 
+
+**Paso 4.** Una vez creada la base de datos, se debe crear una carpeta llamada **config** en la carpeta Disco local (C:) (Si el sistema operativo de su máquina es Windows) o en la raíz del sistema (Si el sistema operativo de su máquina es Linux).
+
+**Paso 5.** Ubicados en la carpeta **entregables**, se debe ejecutar el siguiente comando para correr la aplicación en java:
+```bash
+java -jar api_rest-0.0.1-SNAPSHOT.jar
+```
+
+**Paso 6.** Ahora, vamos a instalar un servidor http con el siguiente comando:
+```bash
+npm i -g http-server --save
+```
+
+Una vez instalado y ubicados en la carpeta **entregables**, ejecutamos la aplicación con el siguiente comando:
+```bash
+http-server dist/
+```
+
+Y por último, abrimos en el navegador la siguiente URL: http://127.0.0.1:8080/web-front/
 
 ## Licencia
 [MIT](https://choosealicense.com/licenses/mit/)
