@@ -1,0 +1,181 @@
+{
+	"info": {
+		"_postman_id": "7939af79-a1e6-43b2-83e3-31614901f0a4",
+		"name": "COLECCION_API_REST_ACTIVOS_FIJOS",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Servicio para listar las areas",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8888/api/area/findAll",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8888",
+					"path": [
+						"api",
+						"area",
+						"findAll"
+					]
+				},
+				"description": "El servicio lista las áreas registradas."
+			},
+			"response": []
+		},
+		{
+			"name": "Servicio para listar las ciudades",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8888/api/city/findAll",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8888",
+					"path": [
+						"api",
+						"city",
+						"findAll"
+					]
+				},
+				"description": "El servicio lista las ciudades registradas."
+			},
+			"response": []
+		},
+		{
+			"name": "Servicio para listar las personas",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8888/api/person/findAll",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8888",
+					"path": [
+						"api",
+						"person",
+						"findAll"
+					]
+				},
+				"description": "El servicio lista las personas registradas."
+			},
+			"response": []
+		},
+		{
+			"name": "Servicio para obtener la información de un activo fijo por ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8888/api/fixedAsset/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8888",
+					"path": [
+						"api",
+						"fixedAsset",
+						"1"
+					]
+				},
+				"description": "El servicio filtra los activos fijos por ID."
+			},
+			"response": []
+		},
+		{
+			"name": "Servicio para filtrar activos fijos",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"type\": null,\r\n\t\"purchaseDate\": null,\r\n\t\"serialNumber\": null\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8888/api/fixedAsset/searchByFilter",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8888",
+					"path": [
+						"api",
+						"fixedAsset",
+						"searchByFilter"
+					]
+				},
+				"description": "El servicio filtra los activos fijos por: tipo, fecha de compra y/o numero de serie. \n\nSi se desea listar todos los activos fijos, los valores del filtro deben ser nulos."
+			},
+			"response": []
+		},
+		{
+			"name": "Servicio para crear/actualizar un activo fijo",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"idFixedAsset\": null,\r\n    \"name\": \"Activo 4\",\r\n    \"idType\": 1,\r\n    \"description\": \"Descripcion del activo 4\",\r\n    \"serialNumber\": \"S000004\",\r\n    \"inventoryNumber\": 4,\r\n    \"assetWeight\": 70.52,\r\n    \"assetHeigh\": 20.50,\r\n    \"assetWidth\": 50.8,\r\n    \"assetLong\": 50.65,\r\n    \"purchaseValue\": 1800000,\r\n    \"purchaseDate\": \"2021-06-28\",\r\n    \"idArea\": null,\r\n    \"idPerson\": 1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8888/api/fixedAsset/save",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8888",
+					"path": [
+						"api",
+						"fixedAsset",
+						"save"
+					]
+				},
+				"description": "El servicio crea o actualiza un activo fijo.\n\nSi se va crear un activo fijo, el parámetro \"idFixedAsset\" debe ser nulo, pero si va actualizar un activo fijo, el parámetro \"idFixedAsset\" debe tener el ID del activo fijo que se quiere actualizar.\n\nLos campos opcionales son: descripción, área y persona. Un activo fijo solo puede ser asociado a un área o una persona y la fecha de compra debe estar en formato AAAA-MM-DD."
+			},
+			"response": []
+		},
+		{
+			"name": "Servicio para listar los tipos de activos fijos",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8888/api/typeAsset/findAll",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8888",
+					"path": [
+						"api",
+						"typeAsset",
+						"findAll"
+					]
+				},
+				"description": "El servicio lista los tipos de activos fijos registradas."
+			},
+			"response": []
+		}
+	]
+}
