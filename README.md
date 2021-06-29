@@ -13,9 +13,9 @@ ciudad (diferentes áreas se encuentran en diferentes ciudades).
 
 Por lo tanto, se decide diseña un API RESTFul que permita administrar los activos y permita:
 
-1. Buscar los activos fijos por: tipo, fecha de compra y/o serial.
-2. Crear nuevos activos.
-3. Actualizar activos.
+**1.** Buscar los activos fijos por: tipo, fecha de compra y/o serial.
+**2.** Crear nuevos activos.
+**3.** Actualizar activos.
 
 ## Tecnologías
 
@@ -25,7 +25,7 @@ Por lo tanto, se decide diseña un API RESTFul que permita administrar los activ
 ### BACKEND
 * Java 8
 * Maven
-* Framework Spring Boot 2.5.2
+* Framework Spring Boot
 * Postman
 
 ### FRONTEND
@@ -38,10 +38,24 @@ Por lo tanto, se decide diseña un API RESTFul que permita administrar los activ
 ```bash
 git clone https://github.com/ingalexandra/ACTIVOS_FIJOS.git
 ```
+**Paso 2.** Para ubicarse en el directorio con los entregables, se debe ejecutar el siguiente comando:
+```bash
+cd entregables
+```
 
-**Paso 2.** Ubicarse en el directorio entregables y ejecutar el siguiente comando:
+**Paso 3.** En la carpeta se encuentra el script de creación del esquema de la base de datos (MySQL). Este script se puede ejecutar con la aplicacion 
+Workbench en una instancia local. 
+
+**Paso 4.** Una vez creada la base de datos, se debe crear una carpeta llamada **config** en la carpeta Disco local (C:) (Si el sistema operativo de su máquina es Windows) o en la raíz del sistema (Si el sistema operativo de su máquina es Linux).
+
+**Paso 5.** Ahora, se debe ejecutar el siguiente comando para correr la aplicación en java:
 ```bash
 java -jar api_rest-0.0.1-SNAPSHOT.jar
+```
+
+**Paso 6.** Por último, se debe abrir en un IDE (Puede ser Visual Studio Code) el proyecto en Angular y ejecutar el siguiente comando para correr la aplicación:
+```bash
+ng serve --open
 ```
 
 ## Licencia
