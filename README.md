@@ -28,12 +28,20 @@ Por lo tanto, se decide diseña un API RESTFul que permita administrar los activ
 * Framework Spring Boot 2.5.2
 * Postman
 
+### FRONTEND
+* Angular 8
+* Bootstrap 4
+
 ## Instalación
 
 **Paso 1.** Abrir la consola y ejecutar el siguiente comando:
-
 ```bash
 git clone https://github.com/ingalexandra/ACTIVOS_FIJOS.git
+```
+
+**Paso 2.** Ubicarse en el directorio entregables y ejecutar el siguiente comando:
+```bash
+java -jar api_rest-0.0.1-SNAPSHOT.jar
 ```
 
 ## Licencia
